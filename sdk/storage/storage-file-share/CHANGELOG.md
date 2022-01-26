@@ -8,6 +8,8 @@
 
 ### Bugs Fixed
 
+- Set correct content length in requests for uploading operations to avoid unexpected failure if customized content length is incorrect.
+
 ### Other Changes
 
 ## 12.9.0-beta.2 (2021-12-03)
@@ -206,14 +208,14 @@
   Before this change the option is specified as
   ```js
   fileServiceClient.listShares({
-    include: ["metadata", "snapshots"]
+    include: ["metadata", "snapshots"],
   });
   ```
   After this change:
   ```js
   fileServiceClient.listShares({
     includeMetadata: true,
-    includeSnapshots: true
+    includeSnapshots: true,
   });
   ```
 
