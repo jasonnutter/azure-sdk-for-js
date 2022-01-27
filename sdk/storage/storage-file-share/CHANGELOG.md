@@ -8,6 +8,8 @@
 
 ### Bugs Fixed
 
+- Refined user-agent value to avoid failure when os information is not available on some platforms.
+
 ### Other Changes
 
 ## 12.9.0-beta.2 (2021-12-03)
@@ -206,14 +208,14 @@
   Before this change the option is specified as
   ```js
   fileServiceClient.listShares({
-    include: ["metadata", "snapshots"]
+    include: ["metadata", "snapshots"],
   });
   ```
   After this change:
   ```js
   fileServiceClient.listShares({
     includeMetadata: true,
-    includeSnapshots: true
+    includeSnapshots: true,
   });
   ```
 
