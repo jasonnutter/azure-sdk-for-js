@@ -1543,8 +1543,6 @@ interface Response_2<T> {
     // (undocumented)
     code?: number;
     // (undocumented)
-    cosmosException?: [string];
-    // (undocumented)
     headers: CosmosHeaders;
     // (undocumented)
     result?: T;
